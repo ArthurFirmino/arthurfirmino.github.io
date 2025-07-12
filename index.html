@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Arthur Firmino</title>
+    <title>Arthur Firmino, PhD</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            align-items: center;
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
-            font-size: small;
-            background-color: #f4f4f4;
-            color: rgb(40, 40, 40);
-            min-height: 100vh;
-        } 
+            align-items: center;
+            background-color: #ffffff;
+            color: #2c2c2c;
+            font-size: 15px;
+        }
 
         .header-title {
             display: flex;
             align-items: center;
             justify-content: left;
-            margin-bottom: -15px;
+            margin-bottom: 5px;
 
         }
 
@@ -28,111 +27,90 @@
             width: 24px;
             height: 24px;
         }
-
         main {
-            flex-grow: 1;   
-            align-items: center;
             max-width: 650px;
+            width: 100%;
+        }
+
+        .bio {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .bio img {
+            width: 90px;
+            border-radius: 4px;
+        }
+
+        .bio p {
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 4px;
+        }
+
+        ul.publication-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul.publication-list li {
+            margin-bottom: 12px;
         }
 
         footer {
-            padding-top: 2px;
-            padding-bottom: 2px;
+            font-size: 0.8em;
             text-align: center;
-            font-size: smaller;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            margin-top: auto;
+            padding-top: 40px;
+            color: #888;
         }
-
-        .container {
-            margin: 0 auto;
-            padding: 20px;
-        }
-
     </style>
 </head>
 <body>
     <header>
         <div class="header-title">
-            <h1 style="font-size:large; padding-right: 20px;">Arthur Firmino</h1>
-            <div style="margin-right: 10px;">
+            <h1 style="font-size:large; padding-right: 10px;">Arthur Firmino, PhD</h1>
+            <div style="margin-right: 0px;">
                 <a href="https://www.linkedin.com/in/arthur-firmino/">
                     <img src="images/linkedin-3.svg" alt="LinkedIn">
                 </a> 
             </div>                   
-            <a href="https://twitter.com/apvfirmino">
-                <img src="images/twitter.svg" alt="Twitter">
-            </a>            
         </div>
     </header>
+
     <main>
-        <div class="container" style="margin-bottom: -40px;">
-            <img style="width:90px;
-                        margin-right: 20px;
-                        padding-top: 16px;
-                        float: left" src="images/me.jpg" alt="Me">
+        <section class="bio">
+            <img src="images/me.jpg" alt="Arthur Firmino">
             <p>
-                I'm a Senior Software Engineer at KeyShot working on physically-based rendering. Previously I completed a PhD with KeyShot and the Technical University of Denmark, in which the focus of my research was on image denoising and adaptive sampling for Monte Carlo ray tracing. Prior to my PhD I worked on Halo Infinite at SkyBox Labs in Vancouver. I also hold an MSc in Computer Science, and a BSc in Physics. If you have questions feel free to <a href="mailto:arthur.p.v.firmino@gmail.com">email</a>. 
+                Machine Learning Engineer at Apple. Based in Copenhagen.<br><br>
+                Previously Senior Software Engineer at KeyShot.<br>PhD from the Technical University of Denmark.
             </p>
-        </div>
-        <br>
-        <div class="container" style="margin-bottom: -40px;">
-            <h1 style="font-size:medium;">Publications</h1>
-            <div>
-                <img style="width:90px;
-                            margin-right: 10px;
-                            float: left" src="images/sig24_representative.jpg">
-                <p>
-                    <b>Practical Error Estimation for Denoised Monte Carlo Image Synthesis</b><br>
-                    Arthur Firmino, Ravi Ramamoorthi, Jeppe Revall Frisvad, Henrik Wann Jensen<br>
-                    <it>SIGGRAPH 2024 Conference Proceedings July 2024</it><br>
-                    [<a href="docs/perr.pdf">pdf</a>]
-                </p>
-            </div>
-            <br>
-            <div>
-                <img style="width:90px;
-                            margin-right: 10px;
-                            float: left" src="images/sig23_representative.jpg">
-                <p>
-                    <b>Denoising-Aware Adaptive Sampling for Monte Carlo Ray Tracing</b><br>
-                    Arthur Firmino, Jeppe Revall Frisvad, Henrik Wann Jensen<br>
-                    <it>SIGGRAPH 2023 Conference Proceedings July 2023</it><br>
-                    [<a href="docs/daas.pdf">pdf</a>] [<a href="docs/daas_suppl.pdf">supplemental</a>]
-                </p>
-            </div>
-            <br>
-            <div>
-                <img style="width:90px;
-                            margin-right: 10px;
-                            float: left;" src="images/pd.png">
-                <p>
-                    <b>Progressive Denoising of Monte Carlo Rendered Images</b><br>
-                    Arthur Firmino, Jeppe Revall Frisvad, Henrik Wann Jensen<br>
-                    <it>Computer Graphics Forum (EG 2022) May 2022.</it><br>
-                    [<a href="docs/progdenoising.pdf">pdf</a>] [<a href="docs/progdenoising_suppl.pdf">supplemental</a>] [<a href="https://github.com/ArthurFirmino/progressive-denoising">code</a>]
-                </p>
-            </div>
-        </div>
-        <br>
-        <div class="container">
-            <h1 style="font-size:medium;">Other Projects</h1>
-            <div>
-                <img style="width:90px;
-                            margin-right: 10px;
-                            float: left" src="images/22halo.png">
-                <p>
-                    <b>Physically Based Rendering of Ice Crystal Halos</b><br>
-                    Arthur Firmino, Supervised by Brian Wyvill<br>
-                    MSc Project, University of Victoria (2018)<br> 
-                    [<a href="msc_project.pdf">pdf</a>] [<a href="https://github.com/ArthurFirmino/ice-crystal-halos">code</a>]
-                </p>
-            </div>
-        </div>
+        </section>
+
+        <section>
+            <h2>Publications</h2>
+            <ul class="publication-list">
+                <li><b>Practical Error Estimation for Denoised Monte Carlo Image Synthesis</b><br>
+                SIGGRAPH 2024. A. Firmino, R. Ramamoorthi, J. R. Frisvad, H. W. Jensen</li>
+
+                <li><b>Denoising-Aware Adaptive Sampling for Monte Carlo Ray Tracing</b><br>
+                SIGGRAPH 2023. A. Firmino, J. R. Frisvad, H. W. Jensen</li>
+
+                <li><b>Progressive Denoising of Monte Carlo Rendered Images</b><br>
+                Eurographics 2022. A. Firmino, J. R. Frisvad, H. W. Jensen</li>
+            </ul>
+        </section>
     </main>
+
     <footer>
-        &copy; 2023 Arthur Firmino
+        &copy; 2025 Arthur Firmino
     </footer>
 </body>
 </html>
