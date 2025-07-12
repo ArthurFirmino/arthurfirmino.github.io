@@ -1,58 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Arthur Firmino, PhD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        :root {
+            --text-color: #2c2c2c;
+            --accent-color: #0077b5;
+            --font-base: 16px;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
             margin: 0;
-            padding: 40px 20px;
+            padding: 0;
+            background-color: #fff;
+            color: var(--text-color);
+            font-size: var(--font-base);
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: #ffffff;
-            color: #2c2c2c;
-            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        main {
+            width: 100%;
+            max-width: 700px;
+            padding: 2rem 1rem;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            padding: 2rem 1rem 1rem;
+            box-sizing: border-box;
+            text-align: center;
+            border-bottom: 1px solid #eee;
         }
 
         .header-title {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            justify-content: left;
-            margin-bottom: 5px;
-
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
         }
 
         .header-title img {
-            width: 24px;
-            height: 24px;
-        }
-        main {
-            max-width: 650px;
-            width: 100%;
+            width: 22px;
+            height: 22px;
+            vertical-align: -2px;
         }
 
         .bio {
             display: flex;
             align-items: flex-start;
-            gap: 20px;
-            margin-bottom: 40px;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: nowrap;
         }
 
         .bio img {
             width: 90px;
-            border-radius: 4px;
+            border-radius: 6px;
+            flex-shrink: 0;
         }
 
         .bio p {
             margin: 0;
+            flex: 1;
         }
 
         h2 {
-            font-size: 1.2em;
-            margin-bottom: 10px;
+            font-size: 1.25rem;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
             border-bottom: 1px solid #ddd;
-            padding-bottom: 4px;
+            padding-bottom: 0.3rem;
         }
 
         ul.publication-list {
@@ -61,27 +86,42 @@
         }
 
         ul.publication-list li {
-            margin-bottom: 12px;
+            margin-bottom: 1rem;
         }
 
         footer {
-            font-size: 0.8em;
+            font-size: 0.9rem;
             text-align: center;
+            color: #999;
+            padding: 2rem 1rem;
+            width: 100%;
+            border-top: 1px solid #eee;
             margin-top: auto;
-            padding-top: 40px;
-            color: #888;
+        }
+
+        @media (max-width: 600px) {
+            .bio {
+                flex-wrap: nowrap;
+                flex-direction: row;
+            }
+
+            .bio p {
+                font-size: 0.95rem;
+            }
+
+            .header-title {
+                font-size: 1.25rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="header-title">
-            <h1 style="font-size:large; padding-right: 10px;">Arthur Firmino, PhD</h1>
-            <div style="margin-right: 0px;">
-                <a href="https://www.linkedin.com/in/arthur-firmino/">
-                    <img src="images/linkedin-3.svg" alt="LinkedIn">
-                </a> 
-            </div>                   
+            <span>Arthur Firmino, PhD</span>
+            <a href="https://www.linkedin.com/in/arthur-firmino/" title="LinkedIn">
+                <img src="images/linkedin-3.svg" alt="LinkedIn Icon">
+            </a>
         </div>
     </header>
 
@@ -89,8 +129,9 @@
         <section class="bio">
             <img src="images/me.jpg" alt="Arthur Firmino">
             <p>
-                Machine Learning Engineer at Apple. Based in Copenhagen.<br><br>
-                Previously Senior Software Engineer at KeyShot.<br>PhD from the Technical University of Denmark.
+                Machine Learning Engineer at Apple. Based in Copenhagen.<br>
+                Previous role as Senior Software Engineer at KeyShot.<br>
+                PhD from the Technical University of Denmark.
             </p>
         </section>
 
@@ -98,13 +139,13 @@
             <h2>Publications</h2>
             <ul class="publication-list">
                 <li><b>Practical Error Estimation for Denoised Monte Carlo Image Synthesis</b><br>
-                SIGGRAPH 2024. A. Firmino, R. Ramamoorthi, J. R. Frisvad, H. W. Jensen</li>
+                    SIGGRAPH 2024. A. Firmino, R. Ramamoorthi, J. R. Frisvad, H. W. Jensen</li>
 
                 <li><b>Denoising-Aware Adaptive Sampling for Monte Carlo Ray Tracing</b><br>
-                SIGGRAPH 2023. A. Firmino, J. R. Frisvad, H. W. Jensen</li>
+                    SIGGRAPH 2023. A. Firmino, J. R. Frisvad, H. W. Jensen</li>
 
                 <li><b>Progressive Denoising of Monte Carlo Rendered Images</b><br>
-                Eurographics 2022. A. Firmino, J. R. Frisvad, H. W. Jensen</li>
+                    Eurographics 2022. A. Firmino, J. R. Frisvad, H. W. Jensen</li>
             </ul>
         </section>
     </main>
